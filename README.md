@@ -17,3 +17,10 @@ The goal of this project was to gain hands-on experience in cloud computing, net
 - Let’s Encrypt (Certbot)
 - Namecheap (Domain & DNS Management)
 - Git & GitHub
+
+
+# Architecture Overview
+
+This project follows a simple cloud architecture:
+
+**User → Internet → AWS VPC → EC2 Instance → Nginx → HTTPS (SSL/TLS)**
