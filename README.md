@@ -366,9 +366,6 @@ This step was taken to:
 The project remains fully reproducible by launching a new EC2 instance and reconfiguring the environment using this documentation.
 
 
-#### Final Note
-
-This project reflects a real-world DevOps workflow, from infrastructure setup to secure deployment, demonstrating my readiness for **Cloud/DevOps roles**.
 
 
 
