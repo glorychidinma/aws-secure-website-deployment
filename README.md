@@ -1,5 +1,14 @@
 # Deploying a Secure Website on AWS EC2 with Custom Domain and SSL/TLS
 
+
+### Live Site Status
+
+The live website is currently offline because the EC2 instance has been terminated to avoid unnecessary AWS charges.
+
+All deployment steps, configurations, and verification screenshots are fully documented in this repository.
+
+
+
 ## Project Overview
 
 This project demonstrates how I deployed a production-like website on an AWS EC2 instance using Nginx, connected a custom domain from Namecheap, and secured the website with Let’s Encrypt SSL/TLS.
@@ -155,7 +164,7 @@ Once propagation was successful, I accessed my website:
 
   ## SSL Setup with Let’s Encrypt
 
-#### Step 1: Configure Domain with Nginx
+### Step 1: Configure Domain with Nginx
 
 - To prepare the server for SSL configuration, I updated the default Nginx configuration file to include my domain name.
 
@@ -279,13 +288,6 @@ Target rating: Grade A or A+
 - Troubleshooting & Deployment Workflow
 
 
-
-### Cost Optimization
-
-- EC2 instance was terminated after testing to prevent AWS charges
-
-
-
   ## Troubleshooting
 
   During the deployment process, I encountered and resolved the following issues 
@@ -349,6 +351,19 @@ These issues helped me gain practical experience in:
 - Nginx web server debugging
 - Cloud security best practices
 - Real-world Linux server error handling
+
+
+  ### Instance Termination & Project Closure
+
+After successfully deploying and testing the website, the EC2 instance was terminated.
+
+This means the public IP address is no longer active, and the website is not accessible via the browser.
+
+This step was taken to:
+- Avoid unnecessary AWS charges
+- Demonstrate proper cloud resource management
+
+The project remains fully reproducible by launching a new EC2 instance and reconfiguring the environment using this documentation.
 
 
 #### Final Note
