@@ -185,7 +185,6 @@ Once propagation was successful, I accessed my website:
 
 sudo systemctl restart nginx
 
-
 #### Configuration Test
 
 To verify that the domain was correctly configured, I accessed the website via:
