@@ -280,8 +280,80 @@ Target rating: Grade A or A+
 
 
 
-## Cost Optimization
+### Cost Optimization
 
 - EC2 instance was terminated after testing to prevent AWS charges
+
+
+
+  ## Troubleshooting
+
+  During the deployment process, I encountered and resolved the following issues 
+
+
+a. DNS Propagation Delay
+
+   - After configuring DNS records, the domain was not immediately accessible
+   - This was due to DNS propagation delay across global servers
+   - I verified propagation using DNS Checker and waited until the records were fully updated
+
+
+b. Certbot SSL Verification Failure
+
+- While generating the SSL certificate, Certbot initially failed
+- The issue was caused by a missing or incorrect `www` CNAME record in DNS configuration
+- This prevented Let’s Encrypt from verifying domain ownership
+
+ **Resolution:**
+
+- Updated DNS records in Namecheap
+- Added the correct `www` CNAME record pointing to the root domain
+- Re-ran Certbot successfully and SSL was issued
+
+
+c. Nginx Configuration Syntax Error
+
+- While updating the Nginx server block with my domain name, the configuration failed to apply
+- The issue was caused by a missing semicolon (`;`) at the end of the `server_name` directive
+- Because Nginx is syntax-sensitive, the configuration could not run
+
+
+**Resolution:**
+
+- Identified the missing semicolon in the configuration file
+- Corrected the syntax and saved the file
+- Restarted Nginx successfully after fixing the error
+
+
+**Lesson Learned:**
+
+- Nginx configuration is very sensitive to syntax, and even small errors like a missing semicolon can prevent the service from running
+
+
+#### d. SSH Security Exposure
+
+- Initially, SSH (Port 22) was open to all IP addresses (`0.0.0.0/0`), which is not secure
+
+**Resolution:**
+
+- Restricted SSH access to only my IP address via AWS security group rules
+- This improved server security by reducing unauthorized access risk
+
+
+### Key Takeaway
+
+These issues helped me gain practical experience in:
+
+- DNS configuration and troubleshooting
+- SSL certificate deployment
+- Nginx web server debugging
+- Cloud security best practices
+- Real-world Linux server error handling
+
+
+#### Final Note
+
+This project reflects a real-world DevOps workflow, from infrastructure setup to secure deployment, demonstrating my readiness for **Cloud/DevOps roles**.
+
 
 
