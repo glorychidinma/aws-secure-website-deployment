@@ -353,7 +353,7 @@ These issues helped me gain practical experience in:
 - Real-world Linux server error handling
 
 
- ### Instance Termination & Project Closure
+ ### EC2 Instance Termination & Project Closure
 
 After successfully deploying and testing the website, the EC2 instance was terminated.
 
