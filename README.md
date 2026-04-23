@@ -19,7 +19,7 @@ The goal of this project was to gain hands-on experience in cloud computing, net
 - Git & GitHub
 
 
-# Architecture Overview
+## Architecture Overview
 
 This project follows a simple cloud architecture:
 
