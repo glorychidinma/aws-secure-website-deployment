@@ -37,7 +37,7 @@ This project follows a simple cloud architecture:
 - No custom VPC configuration was required for this deployment
 
 
-### step 2: EC2 Instance Setup
+### Step 2: EC2 Instance Setup
 
 - Launched an EC2 instance (ubuntu)
 - Enabled inbound security group rules:
@@ -46,7 +46,7 @@ This project follows a simple cloud architecture:
     - Port 443 (HTTPS)
 
     
-### step 3: SSH Connection via MobaXterm
+### Step 3: SSH Connection via MobaXterm
 
 - Opened MobaXterm
 - Clicked **Session**
@@ -56,7 +56,7 @@ This project follows a simple cloud architecture:
 - Imported the private key file (.pem) generated during EC2 setup
 - Clicked **Connect**
 
-Successfully connected to the EC2 instance via SSH.
+....Successfully connected to the EC2 instance via SSH.
 
 
 ### Step 4: Install Nginx (Web Server)
@@ -78,7 +78,7 @@ sudo systemctl status nginx
 If configured properly, this displays the default “Welcome to Nginx” page, confirming that the web server is active and serving content successfully.
 
 
-### step 5: Deploy Website
+### Step 5: Deploy Website
 
 - Clone the project repository from github
 
