@@ -153,4 +153,105 @@ Once propagation was successful, I accessed my website:
 
 
 
+  ## SSL Setup with Let’s Encrypt
 
+#### Step 1: Configure Domain with Nginx
+
+- To prepare the server for SSL configuration, I updated the default Nginx configuration file to include my domain name.
+
+   - Run the following command to open the Nginx configuration file:
+
+     sudo nano /etc/nginx/sites-available/default
+
+- Within the configuration file, I modified the server_name directive to point to my domain:
+
+ server_name glorychidinmaotulu.online www.glorychidinmaotulu.online;
+
+- After making the changes, I saved and exited the file.
+
+
+#### Apply Configuration Changes
+
+- Run the following command to restart Nginx and apply the updates:
+
+sudo systemctl restart nginx
+
+
+#### Configuration Test
+
+To verify that the domain was correctly configured, I accessed the website via:
+
+>>> http://glorychidinmaotulu.online
+
+The site loaded successfully, confirming that Nginx was properly serving the domain and ready for SSL certificate installation.
+
+
+### Step 2: Install Certbot
+
+Before generating the SSL certificate, I updated the server packages and installed Certbot along with the Nginx plugin.
+
+Run the following commands:
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt install certbot python3-certbot-nginx -y
+
+
+### Step 3: Generate SSL Certificate
+
+I generated and installed the SSL certificate for my domain using Certbot with the Nginx plugin.
+
+Run the following command:
+
+sudo certbot --nginx -d glorychidinmaotulu.online -d www.glorychidinmaotulu.online
+
+ 
+#### During Setup
+
+During the SSL setup process, I completed the following:
+
+- Provided an email address for certificate registration
+- Accepted the Let’s Encrypt terms of service
+- Enabled automatic redirection from HTTP to HTTPS
+
+
+#### What This Process Achieved
+
+This step automatically:
+
+- Installed and configured the SSL certificate
+- Updated Nginx configuration for HTTPS
+- Enabled secure HTTPS access
+- Set up automatic certificate renewal
+
+
+### Step 4: SSL Verification
+
+After successfully installing the SSL certificate, I carried out multiple checks to confirm that HTTPS was properly configured and functioning as expected.
+
+- HTTPS Access Test:
+
+I verified that the website was securely accessible via HTTPS:
+
+https://glorychidinmaotulu.online
+https://www.glorychidinmaotulu.online
+
+Both versions loaded successfully with a secure connection, confirming that SSL was active.
+
+
+ - HTTP to HTTPS Redirect Test
+
+I also tested the HTTP version of the site to confirm automatic redirection:
+
+http://glorychidinmaotulu.online
+ → redirected to HTTPS
+
+This confirmed that all traffic is securely enforced through HTTPS.
+
+
+#### SSL Security Validation
+
+To further validate the SSL configuration, I used the SSL testing tool below:
+
+https://www.ssllabs.com/ssltest/
+Target rating: Grade A or A+
