@@ -257,7 +257,7 @@ https://www.ssllabs.com/ssltest/
 Target rating: Grade A or A+
 
 
-## Project Lifecycle Summary
+### Project Lifecycle Summary
 
 - Deployed a website on AWS EC2
 - Configured Nginx as a web server
@@ -268,7 +268,7 @@ Target rating: Grade A or A+
 - Terminated EC2 instance after testing to avoid cost
 
 
-## Key Skills Demonstrated
+### Key Skills Demonstrated
 
 - Cloud Infrastructure (AWS EC2, VPC)
 - Linux Server Management
