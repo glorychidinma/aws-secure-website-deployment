@@ -255,3 +255,33 @@ To further validate the SSL configuration, I used the SSL testing tool below:
 
 https://www.ssllabs.com/ssltest/
 Target rating: Grade A or A+
+
+
+## Project Lifecycle Summary
+
+- Deployed a website on AWS EC2
+- Configured Nginx as a web server
+- Connected a custom domain (Namecheap)
+- Secured site with SSL/TLS ( Let’s Encrypt )
+- Verified HTTPS and SSL configuration
+- Improved security by restricting SSH access to a specific IP
+- Terminated EC2 instance after testing to avoid cost
+
+
+## Key Skills Demonstrated
+
+- Cloud Infrastructure (AWS EC2, VPC)
+- Linux Server Management
+- Web Server Configuration (Nginx)
+- DNS Management
+- SSL/TLS Implementation
+- Security Best Practices (SSH Hardening)
+- Troubleshooting & Deployment Workflow
+
+
+
+## Cost Optimization
+
+- EC2 instance was terminated after testing to prevent AWS charges
+
+
